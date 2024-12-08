@@ -1,6 +1,5 @@
 name: check_issue
-on: 
-  issues:
+on: issues
 
 jobs:
   check-issue-event:
