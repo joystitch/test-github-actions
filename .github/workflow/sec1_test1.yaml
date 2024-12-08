@@ -1,0 +1,19 @@
+name: deployment_1
+on: workflow_dispatch
+
+
+jobs:
+  deployment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+      - name: lint
+        run: npm run lint
+      - name: test
+        run: npm run test
+      - name: build
+        run: npm run build
+      - name: complete
+        run: echo "deploying..."
+      
